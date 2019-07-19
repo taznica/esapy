@@ -22,3 +22,12 @@ class Client:
 
     def teams(self):
         return self.get('teams')
+
+    def team(self, team_name):
+        return self.get('teams/' + team_name)
+
+    def stats(self, team_name):
+        return self.get('teams/' + team_name + '/stats')
+
+    def members(self, team_name):
+        return self.get('teams/' + team_name + '/members')
