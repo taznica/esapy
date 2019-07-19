@@ -31,3 +31,10 @@ class Client:
 
     def members(self, team_name):
         return self.get('teams/' + team_name + '/members')
+
+    # TODO: query, include, sort and order
+    def posts(self, team_name):
+        return self.get('teams/' + team_name + '/posts')
+
+    def post(self, team_name, post_number):
+        return self.get('teams/' + team_name + '/posts/' + str(post_number))
