@@ -3,18 +3,15 @@
 
 import os
 from esa.client import Client
-from esa.post import Post
 
 token = os.environ['ESA_ACCESS_TOKEN']
-team_name = 'taznica'
+team_name = os.environ['TEAM_NAME']
 
 
 def main():
     client = Client(access_token=token, current_team=team_name)
 
-    post = Post(name='test4', category='dev/aaa', tags=['test', 'test2'])
-
-    print(client.new_post(team_name, post))
+    print(client.team(team_name))
 
 
 if __name__ == '__main__':
