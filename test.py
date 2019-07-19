@@ -8,7 +8,7 @@ token = os.environ['ESA_ACCESS_TOKEN']
 
 
 def main():
-    client = Client(team_name='taznica', access_token=token)
+    client = Client(access_token=token, current_team='taznica')
 
     print(client.teams())
 

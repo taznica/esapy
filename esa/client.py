@@ -6,9 +6,9 @@ import requests
 
 
 class Client:
-    def __init__(self, team_name, access_token):
-        self.team_name = team_name
+    def __init__(self, access_token, current_team):
         self.access_token = access_token
+        self.current_team = current_team
 
     def create_url(self, end_point):
         base_url = 'https://api.esa.io/v1/'
